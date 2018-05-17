@@ -1,0 +1,64 @@
+@media screen and (max-width: 600px) {
+	div {
+		height: 80px;
+	}
+	div {
+		width: 80px;
+	}
+	div {
+		height: 80px;
+		width: 80px;
+	}
+}
+
+body {
+  margin: 20px 0;
+  background: #6589F9;
+}
+
+.grid {
+  width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  transition: all .5s;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color:rgb(144, 214, 208);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #6589F9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  background: #6589F9;
+}
